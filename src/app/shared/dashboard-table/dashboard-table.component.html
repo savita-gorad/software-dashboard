@@ -1,0 +1,32 @@
+<div class="details-padding">
+  <h3>Recent Order</h3>
+<div class="orderDetails">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Customer</th>
+        <th scope="col">Products</th>
+        <th scope="col">Delivery Date</th>
+        <th scope="col">Status</th>
+        <th scope="col">Tracking No#</th>
+        <th scope="col">Shipping</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody  >
+      <tr *ngFor="let orderDetails of recent_orders;let indexOfelement=index;">
+        <th scope="row">{{indexOfelement +1}}</th>
+        <td>{{orderDetails.name}}</td>
+        <td>{{orderDetails.product}}</td>
+        <td>{{orderDetails.delivery_date | date: 'd MMMM, y'}}</td>
+        <td><button type="button" class="btn" [ngClass]="{'btn-success':(orderDetails.status=='Paid'),'btn-secondary':(orderDetails.status=='Pending'),'btn-danger':(orderDetails.status=='Failed')}">{{orderDetails.status}}</button></td>
+        <td>#{{orderDetails.tracking_no}}</td>
+        <td>{{orderDetails.shipping ? "Yes":"No"}}</td>
+        <td><span>X</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>

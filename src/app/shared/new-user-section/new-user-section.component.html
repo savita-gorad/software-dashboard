@@ -1,0 +1,32 @@
+<div class="details-padding">
+    <h3>New User Registrations</h3>
+<div class="newUsersDetails">
+    <div *ngFor="let newUsersDetails of new_users;" class="row">
+        <div class="col-1 m-1">
+            <div >
+                <img src="{{newUsersDetails.picture}}" alt="" srcset="">
+                <div class="user-icon" [ngClass]="{'user-online-icon':newUsersDetails.isActive,'user-offline-icon':!newUsersDetails.isActive}" >
+                </div>
+            </div>
+        </div>
+       <div class="col-3 m-1">
+        <span id="user-Name">{{newUsersDetails.name}} </span> 
+            <div>
+                {{newUsersDetails.country}}
+            </div>
+       </div>
+       <div class="col-5 m-1">
+         <div class="progress" role="progressbar" aria-label="Basic progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" [style.width]="newUsersDetails.progress + '%'"></div>
+         </div>
+       </div>
+       <div class="col-1">
+        <span>{{newUsersDetails.progress + '%'}}</span>
+    </div>
+        <div class="col-1 m-1">
+            <button type="button" class="btn btn-light">More</button>
+        </div>
+    </div>
+</div>
+
+</div>

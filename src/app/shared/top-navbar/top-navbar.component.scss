@@ -1,0 +1,28 @@
+.user-icon {
+  font-size: 30px;
+  padding: unset;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+  flex-basis: unset;
+  flex-grow: unset;
+  align-items: unset;
+}
+.d-flex {
+  margin-left: 8%;
+}
+.fa-search {
+  position: absolute;
+  top: 20px;
+  margin-left: 7px;
+  font-size: 20px;
+}
+
+input[type="search"] {
+  padding-left: 40px;
+  border: unset;
+}
+.navbar {
+  background: #ffff !important;
+}

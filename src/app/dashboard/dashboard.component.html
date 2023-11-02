@@ -1,0 +1,28 @@
+
+
+<div>
+    <div class="row">
+        <div class="top-cards-details">
+            <app-top-card [top_Cards]="top_Cards"></app-top-card>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 table-details ">
+            <app-dashboard-table [recent_orders]="recent_Orders"></app-dashboard-table>
+        </div>
+        <div class="col-5 new-user-details">
+            <app-new-user-section [new_users]="new_Users"></app-new-user-section>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-4 charts-content">
+        <app-line-chart></app-line-chart>
+      </div>
+      <div class="col-4 charts-content">
+        <app-column-chart></app-column-chart>
+      </div>
+      <div class="col-3 charts-content">
+          <app-pie-chart></app-pie-chart>
+      </div>
+    </div>
+</div>

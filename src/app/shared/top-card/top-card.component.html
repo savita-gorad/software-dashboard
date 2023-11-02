@@ -1,0 +1,11 @@
+<div class="main-card-body">
+    <div *ngFor="let cardDetails of top_Cards" id="card" class="m-3">
+        <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">{{ cardDetails.value }} %</h2>
+              <h6 class="card-text">{{cardDetails.header}}</h6>
+              <h6 class="card-subtitle mb-2 text-body-secondary">{{cardDetails.sub_header}}.</h6>
+            </div>
+          </div>
+    </div>
+</div>
